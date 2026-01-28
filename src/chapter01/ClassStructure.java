@@ -25,6 +25,9 @@ class ClassStructure {
     static void displayInfo(ClassStructure classStructure) {
         System.out.println("Age: "+classStructure.age + ", Name: " + classStructure.name);
     }
+    static class Interna {
+        // código da classe interna
+    }
 }
-class InternalClassExample {
+class SecundaryClassExample {
 }
