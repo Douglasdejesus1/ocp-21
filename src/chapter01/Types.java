@@ -30,8 +30,31 @@ public class Types {
         var integerVar = 100;
         var stringVar = "Hello, World!";
         var type = new Types();
+        // O sufixo L indica que o literal é do tipo long (64 bits).
+        // Se você usar 1_000 (sem L), o literal é int (32 bits), mas pode ser atribuído a long se estiver dentro do limite de int.
+        // Para valores maiores que 2_147_483_647, o L é obrigatório, senão ocorre erro de compilação.
+        // Exemplo:
+        // long x = 3_000_000_000; // ERRO: literal int fora do limite
+        // long y = 3_000_000_000L; // OK: literal long
+        // No caso abaixo, 1_000L e 1_000 são equivalentes, pois 1_000 cabe em int.
+        // O L é boa prática para deixar explícito o tipo long, especialmente em contextos de overflow.
+        long overflowedValue = 1_000L;// Exemplo de overflow
 
+        for (int i = 1; i < 100_000; i++) {
+            if(i==64){
+                System.out.println("Reached i=64, stopping multiplication to prevent excessive overflow.");
+            }
+            overflowedValue = overflowedValue * i;
+            if (i % 3 == 0) {
+                // Imprime o valor em decimal e em binário (64 bits, preenchendo zeros à esquerda)
+                String bits = String.format("%64s", Long.toBinaryString(overflowedValue)).replace(' ', '0');
+                System.out.println("Current overflowed value at i=" + i + ": " + overflowedValue + " (bits: " + bits + ")");
+            }
+
+            if(overflowedValue==0){
+                System.out.println("Overflow occurred at i=" + i);
+                break;
+            }
+        }
     }
-
-
 }
