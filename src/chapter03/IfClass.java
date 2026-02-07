@@ -20,6 +20,8 @@ public class IfClass {
                 System.out.println("nao é Number");
                 return;
             }
+            //num pode ser usado aqui, pois o instanceof com pattern matching
+            // já fez a verificação e a atribuição
             System.out.println(num);
             int b = num.intValue() + 10;
             System.out.println(b);

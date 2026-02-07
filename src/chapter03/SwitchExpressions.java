@@ -40,12 +40,11 @@ class SwitchPatterMatching {
     public static void main(String[] args) {
         Object obj = "Hello, World!";
         String result = switch (obj) {
-            // case String d1 -> "It's a Double: " + d1;
             case Integer i -> "It's an Integer: " + i;
             case String s when s.equals("Hello") -> {
                 yield "It's a String: " + s;
             }
-            case String d -> "It's a Double: " + d;
+            case String d -> "It's a String: " + d;
             default -> "Unknown type";
         };
         System.out.println(result);
