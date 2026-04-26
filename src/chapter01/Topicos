@@ -1,0 +1,54 @@
+Ambiente
+
+JDK, JRE, JVM
+
+.jar
+.java
+.class (bytecode)
+
+Estrutura de uma classe Java
+
+variaveis
+metodos
+    main
+    constructor
+arquivo.java source code
+public
+
+Main
+public static void main(String[] args)
+final
+
+comandos
+javac arquivo.java compila em bytecode
+java arquivo.class arquivo executa vmn interpretador de bytecode para binarios
+java Zoo.java Bronx Zoo
+
+package
+import
+full qualified name
+java.lang.String
+
+Criando Objetos
+new
+construtor
+membros de classe
+blocos de inicializao
+ordem de inicializao
+
+primitivos
+literais
+    underscore
+reference types
+Wrapper classes
+    autoboxing
+    unboxing
+
+var
+
+escopo
+local
+metodo
+instance
+class
+garbage collection
