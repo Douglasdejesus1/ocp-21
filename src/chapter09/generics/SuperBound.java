@@ -26,6 +26,9 @@ public class SuperBound {
         listObject2.add(1);
         print(listObject2);
 
+        var listObject3 = new ArrayList<Exception>();
+        //print(listObject3);
+
 
         List<? super IOException> exceptions = new ArrayList<Exception>();
         //exceptions.add(new Exception()); //tem que se io ou filha dela

@@ -24,20 +24,20 @@ public class CompareClass {
         System.out.println("a <= b: " + (a <= b)); // true
 
 
-
     }
 }
-class InstanceOfCompare extends CompareClass{
+
+class InstanceOfCompare extends CompareClass {
     public static void main(String[] args) {
-            InstanceOfCompare instance = new InstanceOfCompare();
-            CompareClass instance2 = new InstanceOfCompare();
-            Number num = 10;
-            Number num2 = 10;
+        InstanceOfCompare instance = new InstanceOfCompare();
+        CompareClass instance2 = new InstanceOfCompare();
+        Number num = 10;
+        Number num2 = 10;
 
 
-            System.out.println("instance instanceof InstanceOfCompare: " + (instance instanceof InstanceOfCompare)); // true
-            System.out.println("instance instanceof CompareClass: " + (instance instanceof CompareClass)); // true
-            System.out.println("instance2 instanceof CompareClass: " + (instance2 instanceof CompareClass)); // true
+        System.out.println("instance instanceof InstanceOfCompare: " + (instance instanceof InstanceOfCompare)); // true
+        System.out.println("instance instanceof CompareClass: " + (instance instanceof CompareClass)); // true
+        System.out.println("instance2 instanceof CompareClass: " + (instance2 instanceof CompareClass)); // true
 
         System.out.println("num instanceof Integer: " + (num instanceof Integer)); // true
         System.out.println("num instanceof Double: " + (num instanceof Double)); // false
