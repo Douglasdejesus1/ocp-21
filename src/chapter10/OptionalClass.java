@@ -9,6 +9,7 @@ public class OptionalClass {
         Optional<? super Integer> optionalEmpty = Optional.empty();
         Optional<Object> optionalNull = Optional.ofNullable(null);
         System.out.println(optionalNull.isEmpty());
+
         //metodos de instancia
         System.out.println(optional.get());
         optional.ifPresent(System.out::println);
@@ -22,11 +23,22 @@ public class OptionalClass {
             e.printStackTrace();
             optionalEmpty.orElseThrow();
         }*/
+
+        /*
+        .map()              // Transforma o valor
+        .flatMap()          // Transforma em outro Optional
+        .filter()           // Filtra com condição
+        .ifPresent()        // Executa se presente
+        .ifPresentOrElse()  // Executa se presente OU se vazio
+        .orElse()           // Retorna padrão se vazio
+        .orElseGet()        // Executa função se vazio
+        .orElseThrow()      // Lança exceção se vazio
+         */
         optional
                 .map(s -> s.length())
-                .map(i ->i*100)
+                .map(i -> i * 100)
+                .filter(j -> j > 10)
                 .ifPresent(System.out::println);
-
 
     }
 

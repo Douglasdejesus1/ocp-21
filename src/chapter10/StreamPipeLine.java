@@ -104,21 +104,70 @@ public class StreamPipeLine {
     }
 
 }
-class IntermediateOperators{
+
+class IntermediateOperators {
     public static void main(String[] args) {
         //filtering
+        Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6, 7);
+        stream.filter(n -> n > 5)
+                .forEach(System.out::print);
+
+        System.out.println();
         //distinct
+        Stream<String> stringStream = Stream.of("duck", "duck", "duck", "goose");
+        stringStream.distinct()
+                .forEach(System.out::print);
+        System.out.println();
         //limit
+        stream = Stream.iterate(1, n -> n + 1);
+        stream.limit(5)
+                .forEach(System.out::print);
+        System.out.println();
         //skip
+        //pula N primeiros elementos
+        stream = Stream.iterate(1, n -> n + 1);
+        stream.skip(3).limit(5)
+                .forEach(System.out::print);
+        System.out.println();
 
         //map
-        //flatMap
+        stringStream = Stream.of("duck", "duck", "duck", "goose");
+        stringStream.map(String::length)
+                .forEach(System.out::print);
+        System.out.println();
 
+        //flatMap
+        stringStream = Stream.of("duck", "duck", "duck", "goose");
+        stringStream.flatMap(s -> s.chars().boxed()).map(s ->  s+" ")
+                .forEach(System.out::print);
         //concat
+        var one = Stream.of("Bonobo");
+        var two = Stream.of("Mama Gorilla", "Baby Gorilla");
+        Stream.concat(one, two)
+                .forEach(System.out::println);
+        System.out.println();
+
+        //exemplo2
+        // Você tem uma lista de números
+        List<Integer> numeros = Arrays.asList(1, 2, 3);
+
+// FlatMap: para cada número, cria uma lista de múltiplos
+        List<Integer> resultado = numeros.stream()
+                .flatMap(n -> Arrays.stream(new Integer[]{n, n*2, n*3}))
+                .collect(Collectors.toList());
+        System.out.println(resultado); // [1, 2, 3, 2, 4, 6, 3, 6, 9]
+
         //sorting
+        Stream.of("banana", "apple", "grape")
+                .sorted()
+                .forEach(System.out::print);
+        System.out.println();
+
         //peek
-        //
-        //
+        var streamPeek = Stream.of("black bear", "brown bear", "grizzly");
+        long count = streamPeek.filter(s -> s.startsWith("g"))
+                        .peek(System.out::println).count();              // grizzly
+        System.out.println(count);                          // 1
 
     }
 }
