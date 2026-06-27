@@ -1,132 +1,42 @@
-1. Fundamentos da Linguagem (Base obrigatória)
+# OCP Java 21 - Exemplos de Codigo
 
-Esses são os pilares — sem dominar isso, o resto não sustenta.
+Este projeto foi criado para servir de exemplo de codigo para a certificacao Java 21.
+A ideia e reunir exemplos praticos organizados por capitulo, para facilitar estudo, revisao e consulta rapida.
 
-Capítulo 1: Fundamentos (Building Blocks)
-Entendendo o ambiente Java
-Estrutura de classes
-Escrevendo o método main()
-Pacotes e imports
-Criação de objetos
-Tipos de dados
-Declaração e inicialização de variáveis
-Escopo de variáveis
-Destruição de objetos (garbage collection)
-Capítulo 2: Operadores
-Operadores do Java
-Operadores unários (++, --, !)
-Operadores aritméticos
-Atribuição
-Comparações (==, !=, etc.)
-Operador ternário (? :)
-Capítulo 3: Controle de Fluxo
-Estruturas de decisão (if, else)
-switch (incluindo versões modernas)
-Loops (while, for)
-Controle de fluxo (break, continue)
-⚙️ 2. APIs Fundamentais
+## Estrutura do projeto
 
-Uso prático da linguagem no dia a dia.
+- `src/chapterXX`: exemplos principais de cada capitulo
+- `src/chapter09/generics`: aprofundamento em generics
+- `src/var`: exemplos de `var`
+- `src/ClasseSemPackage.java`: exemplo no pacote padrao
+- `resources`: arquivos de apoio para internacionalizacao e formatacao
 
-Capítulo 4: APIs Principais (Core APIs)
-Strings e manipulação de texto
-StringBuilder
-Comparação de objetos (equals, ==)
-Arrays
-API de matemática (Math)
-Datas e horas (java.time)
-Capítulo 5: Métodos
-Criação de métodos
-Variáveis locais vs de instância
-Varargs (...)
-Modificadores de acesso (public, private)
-Métodos static
-Passagem de parâmetros
-Sobrecarga de métodos (overloading)
-🧱 3. Programação Orientada a Objetos (OOP)
+## Resumo por capitulo
 
-Parte central da certificação.
+| Capitulo | Pacote(s) | Resumo |
+|---|---|---|
+| 1 | `chapter01`, `var`, pacote padrao | estrutura de classes, `main`, tipos, objetos, escopo, text blocks, inicializacao e `var` |
+| 2 | `chapter02` | operadores, atribuicao, comparacoes e operador ternario |
+| 3 | `chapter03` | controle de fluxo com `if`, `switch`, `while`, `for`, labels, `break` e `continue` |
+| 4 | `chapter04` | APIs principais: strings, `StringBuilder`, arrays, `Math` e `java.time` |
+| 5 | `chapter05`, `chapter05.modifier` | metodos, visibilidade, `static`, overloading, varargs, passagem de parametros e modificadores de acesso |
+| 6 | `chapter06` | heranca, construtores, classes abstratas, `final`, overriding e `super` |
+| 7 | `chapter07` | interfaces, enums, records, sealed classes e polimorfismo |
+| 8 | `chapter08` | lambdas, interfaces funcionais, method references e interfaces funcionais prontas |
+| 9 | `chapter09`, `chapter09.generics` | collections, ordenacao, listas, sets, maps, deque e generics |
+| 10 | `chapter10` | streams, primitive streams, Optional e pipeline de operacoes |
+| 11 | `chapter11`, `resources` | exceptions, formatacao, locale, resource bundles e internacionalizacao |
+| 12 | - | nao ha exemplos deste capitulo neste repositorio |
+| 13 | `chapter13` | threads, locks, barriers, collections concorrentes e parallel streams |
+| 14 | `chapter14` | arquivos, `File`, `Path`, streams de entrada e saida e serializacao |
 
-Capítulo 6: Design de Classes
-Herança
-Criação de classes
-Construtores
-Inicialização de objetos
-Membros herdados
-Classes abstratas
-Objetos imutáveis
-Capítulo 7: Além das Classes
-Interfaces
-Enums
-Classes seladas (Java moderno)
-Records (imutabilidade simplificada)
-Classes aninhadas
-Polimorfismo
-⚡ 4. Programação Funcional (Java moderno)
+## Recursos de apoio
 
-Muito cobrado na prova.
+Os arquivos `resources/Zoo.properties`, `resources/Zoo_en.properties` e `resources/Zoo_fr.properties` sustentam os exemplos de `ResourceBundle` do capitulo 11.
+O arquivo `resources/aplication.properties` fica como apoio extra para configuracoes de estudo.
 
-Capítulo 8: Lambdas e Interfaces Funcionais
-Expressões lambda
-Interfaces funcionais
-Method references (::)
-Interfaces funcionais padrão (Predicate, Function, etc.)
-Variáveis em lambdas
-Capítulo 10: Streams
-Optional
-Streams (stream())
-Streams primitivos
-Pipeline de operações (map, filter, reduce)
-📦 5. Estruturas de Dados
+## Como usar
 
-Essencial para código eficiente.
-
-Capítulo 9: Collections e Generics
-APIs de collections
-List
-Set
-Queue e Deque
-Map
-Ordenação
-Generics (<T>)
-Novas coleções sequenciadas
-⚠️ 6. Tratamento de Erros e Internacionalização
-Capítulo 11: Exceções e Localização
-Exceções
-Tipos de exceções
-Try/catch/finally
-Try-with-resources
-Formatação de valores
-Internacionalização (i18n)
-Resource bundles
-🧩 7. Modularização (Java 9+)
-
-Importante para arquitetura moderna.
-
-Capítulo 12: Módulos
-Sistema de módulos (JPMS)
-Criar e rodar módulos
-module-info.java
-Serviços
-Descoberta de módulos
-Migração de aplicações
-🧵 8. Concorrência (Multithreading)
-
-Tema avançado, mas muito relevante.
-
-Capítulo 13: Concorrência
-Threads
-API de concorrência
-Código thread-safe
-Collections concorrentes
-Problemas de concorrência (deadlock, race)
-Parallel streams
-💾 9. Entrada e Saída (I/O)
-Capítulo 14: I/O
-Arquivos e diretórios
-File e Path
-Streams de entrada/saída
-Leitura e escrita de arquivos
-Serialização
-Interação com usuário
-APIs avançadas
+- Escolha o capitulo que quer revisar.
+- Execute a classe do exemplo desejado.
+- Para os exemplos de internacionalizacao, mantenha `resources` no classpath.
